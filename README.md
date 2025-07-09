@@ -7,11 +7,11 @@ A Master's degree thesis project by **António Pedro Pinheiro**, supervised by *
 This repository presents a comprehensive **comparative study** of classical and novel **tabular data augmentation techniques** for **imbalanced regression** tasks, including:
 
 - A wide range of **existing literature methods**:
-  - Undersampling/oversampling (RU, RO, WERCS)
+  - Undersampling/Oversampling (RU, RO, WERCS)
   - Introduction of Noise (Gaussian Noise - GN)
   - SMOTE-based techniques adapted for regression (SMOTER, SMOGN, WSMOTER, G-SMOTER)
   - Deep Learning (DAVID)
-  - Regression-specific kNN (KNNOR-REG)
+  - Other Strategies (KNNOR-REG)
   - A **CART-based custom generator**: **CARTGen‑IR**
 
 ---
@@ -20,17 +20,17 @@ This repository presents a comprehensive **comparative study** of classical and 
 
 ```
 .
-├── functions/                                              # Core augmentation routines, utilities and functions
+├── functions/                                              # Core augmentation functions
 ├── datasets/                                               # Collection of CSV datasets
 ├── automated_script_datasets_final.py                      # Main experiment pipeline script
-├── automated_script_datasets_final_with_XGBoost_SERA.py    # Main experiment pipeline script withy an addotional learning model: XGboost with a custom objective function based on SERA
+├── automated_script_datasets_final_with_XGBoost_SERA.py    # Main experiment pipeline script with an additional learning model: XGboost with a custom objective function based on SERA
 ├── results/                                                # Outputs: results, logs, and charts
 └── requirements.txt                                        # Python dependencies
 ```
 
 ---
 
-## Getting Started
+## How to Use
 
 1. **Clone** the repository:
    ```bash
@@ -63,7 +63,7 @@ Implemented methods include:
 - **Introduction of Noise**: Gaussian Noise (GN)  
 - **SMOTE Variants**: SMOTER, SMOGN, WSMOTER, GSMOTER  
 - **Deep Learning**: DAVID  
-- **Regression-specific kNN**: KNNOR‑REG  
+- **Other Strategies**: KNNOR‑REG  
 - **CART-based Synthesizer**: *CARTGen‑IR* (original)
 
 ---
@@ -72,29 +72,18 @@ Implemented methods include:
 
 Models tested:
 
-- **RandomForestRegressor (RF)**
-- **SupportVectorRegressor (SVM / SVR)**
-- **XGBoost Regression (XGB)**
+- **Random Forest Regressor (RF)**
+- **Support Vector Regressor (SVM / SVR)**
+- **XGBoost Regressor (XGB)**
 
 Metrics captured per fold:
 
+- MSE, RMSE, MAE, R²
+- Weighted variants: RW-MSE, RW-RMSE, RW-MAE, RW-R², DW-RMSE (denseweight weighted root mean quared error)
+- IR specific metrics: SERA (area under relevance-weighted error), DW-SERA (denseweight weighted SERA)
 ```
-MSE, RMSE, MAE, R²,
-Weighted variants: RW-MSE, RW-RMSE, RW-MAE, RW-R², DW-RMSE (denseweight weighted root mean quared error),
-+ SERA (area under relevance-weighted error) + DW-SERA (denseweight weighted SERA)
-```
 
-Final results provide **mean ± std** across **10 folds**, with a stratified repeated 2 x 5-Fold Cross Validation Pipeline.
-
----
-
-## 🛠️ Custom CARTGen‑IR Synthesizer
-
-The **CARTGen‑IR** method uses a **rarity-weighted CART model** to generate new data:
-
-- Learns regression trees weighted by target rarity
-- Generates synthetic instances along tree leaves
-- Integrates into CV pipeline as augmentation strategy `"CARTGen-IR"`
+Final results provide **mean ± std** across **10 folds**, within a stratified repeated 2 x 5-Fold Cross Validation Pipeline.
 
 ---
 
@@ -104,18 +93,19 @@ Find the outputs in `results/`:
 
 - `all_results_df.csv`: fold-level metrics per dataset, strategy, parameters, and model  
 - `summary_df.csv`: aggregated results (mean ± std)  
-- Plots (e.g., boxplots, relevance curves) generated alongside per-dataset or aggregated stats
+- Plots and Tables generated for the analysis of the results, namely Wilcoxon Signed-Rank Test, Bayesian Signed Rank Test, Friedman Test, Nemenyi Test + Critical Difference Diagrams
 
 ---
 
 ## Background & References
 
-This work leverages several contributions:
+This work leverages several contributions in the literature:
 
-- Regression adaptations of **SMOTER/SMOGN**  
-- Relevance-based sampling (*phi*-based) 
+- Proposed data-level strategies for IR
+- Regression adaptations of **SMOTER**  
+- Relevance-based sampling
 - Synthetic data generation via **CART**  
-- Weighted error metrics: **WMSE, WMAE, WR²**, **SERA**
+- Weighted error metrics for IR: **WMSE, WRMSE, WMAE, WR², SERA**
 
 ---
 
@@ -124,6 +114,6 @@ This work leverages several contributions:
 - **Author**: António Pedro Pinheiro (Master’s thesis)  
 - **Supervisor**: Rita P. Ribeiro  
 - **License**: MIT (see `LICENSE`)  
-- Based on MSc research at Faculty of Science on University of Porto.
+- Based on MSc research at Faculty of Science of the University of Porto.
 
 ---
