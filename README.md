@@ -81,7 +81,6 @@ Metrics captured per fold:
 - MSE, RMSE, MAE, R²
 - Weighted variants: RW-MSE, RW-RMSE, RW-MAE, RW-R², DW-RMSE (denseweight weighted root mean quared error)
 - IR specific metrics: SERA (area under relevance-weighted error), DW-SERA (denseweight weighted SERA)
-```
 
 Final results provide **mean ± std** across **10 folds**, within a stratified repeated 2 x 5-Fold Cross Validation Pipeline.
 
