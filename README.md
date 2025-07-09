@@ -104,7 +104,7 @@ This work leverages several contributions in the literature:
 - Regression adaptations of **SMOTER**  
 - Relevance-based sampling
 - Synthetic data generation via **CART**  
-- Weighted error metrics for IR: **WMSE, WRMSE, WMAE, WR², SERA**
+- relevance Weighted error metrics for IR: **RW.MSE, RW-RMSE, RW-MAE, RW-R², SERA**
 
 ---
 
