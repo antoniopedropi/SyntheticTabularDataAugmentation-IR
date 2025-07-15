@@ -61,7 +61,7 @@ Implemented methods include:
 
 - **Undersampling/Oversampling**: RU, RO, WERCS  
 - **Introduction of Noise**: Gaussian Noise (GN)  
-- **SMOTE Variants**: SMOTER, SMOGN, WSMOTER, GSMOTER  
+- **SMOTE Variants**: SMOTER, SMOGN, WSMOTER, G-SMOTER  
 - **Deep Learning**: DAVID  
 - **Other Strategies**: KNNOR‑REG  
 - **CART-based Synthesizer**: *CARTGen‑IR* (original)
