@@ -20,6 +20,7 @@ This repository presents a comprehensive **comparative study** of classical and 
 ├── datasets/                                               # Collection of CSV datasets
 ├── automated_script_datasets_final.py                      # Main experiment pipeline script
 ├── automated_script_datasets_final_with_XGBoost_SERA.py    # Main experiment pipeline script with an additional learning model: XGboost with a custom objective function based on SERA
+├── script_interdependencies.jpg                            # Diagram displaying the Python files interdependencies
 ├── results/                                                # Outputs: results, logs, and charts
 └── requirements.txt                                        # Python dependencies
 ```
