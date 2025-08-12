@@ -1,10 +1,6 @@
-# SyntheticTabularDataAugmentation‑IR
+# Comparative Study of Data Generation Techniques (Data‑level) for Imbalanced Regression
 
-**Comparative Study of Data Augmentation Techniques (Data‑level) for Imbalanced Regression**
-
-A Master's degree thesis project by **António Pedro Pinheiro**, supervised by **Rita P. Ribeiro**.
-
-This repository presents a comprehensive **comparative study** of classical and novel **tabular data augmentation techniques** for **imbalanced regression** tasks, including:
+This repository presents a comprehensive **comparative study** of classical and novel **tabular data generation techniques** for **imbalanced regression** tasks, including:
 
 - A wide range of **existing literature methods**:
   - Undersampling/Oversampling (RU, RO, WERCS)
@@ -32,18 +28,12 @@ This repository presents a comprehensive **comparative study** of classical and 
 
 ## How to Use
 
-1. **Clone** the repository:
-   ```bash
-   git clone https://github.com/antoniopedropi/SyntheticTabularDataAugmentation-IR.git
-   cd SyntheticTabularDataAugmentation-IR
-   ```
-
-2. **Install dependencies**:
+1. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the experiments**:
+2. **Run the experiments**:
    ```bash
    python automated_script_datasets_final.py
    ```
@@ -55,7 +45,7 @@ This repository presents a comprehensive **comparative study** of classical and 
 
 ---
 
-## Augmentation Techniques
+## Generation Techniques
 
 Implemented methods include:
 
@@ -82,7 +72,7 @@ Metrics captured per fold:
 - Weighted variants: RW-MSE, RW-RMSE, RW-MAE, RW-R², DW-RMSE (denseweight weighted root mean quared error)
 - IR specific metrics: SERA (area under relevance-weighted error), DW-SERA (denseweight weighted SERA)
 
-Final results provide **mean ± std** across **10 folds**, within a stratified repeated 2 x 5-Fold Cross Validation Pipeline.
+Final results provide **mean ± std** across **10 folds**, within a stratified repeated 2 x 5-Fold Cross-Validation Pipeline.
 
 ---
 
@@ -92,7 +82,7 @@ Find the outputs in `results/`:
 
 - `all_results_df.csv`: fold-level metrics per dataset, strategy, parameters, and model  
 - `summary_df.csv`: aggregated results (mean ± std)  
-- Plots and Tables generated for the analysis of the results, namely Wilcoxon Signed-Rank Test, Bayesian Signed Rank Test, Friedman Test, Nemenyi Test + Critical Difference Diagrams
+- Plots and Tables generated for the analysis of the results, namely Wilcoxon Signed-Rank Test, Bayesian Signed Rank Test, Friedman Test, Nemenyi Test + Critical Difference Diagrams and Runtime Statistics
 
 ---
 
@@ -110,9 +100,6 @@ This work leverages several contributions in the literature:
 
 ## License & Acknowledgments
 
-- **Author**: António Pedro Pinheiro (Master’s thesis)  
-- **Supervisor**: Rita P. Ribeiro  
 - **License**: MIT (see `LICENSE`)  
-- Based on MSc research at Faculty of Science of the University of Porto.
 
 ---
