@@ -1,5 +1,10 @@
 # Comparative Study of Data Generation Techniques (Data‑level) for Imbalanced Regression
 
+This project is part of a Master's degree thesis made by António Pedro Pinheiro and supervised by Rita P. Ribeiro.
+  - Thesis URL: <https://hdl.handle.net/10216/169022>
+  - Code Ocean Reproducible Capsule URL: <https://codeocean.com/capsule/7333875/tree>
+
+
 This repository presents a comprehensive **comparative study** of classical and novel **tabular data generation techniques** for **imbalanced regression** tasks, including:
 
 - A wide range of **existing literature methods**:
