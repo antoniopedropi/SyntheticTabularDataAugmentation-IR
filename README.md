@@ -2,7 +2,7 @@
 
 This project is part of a Master's degree thesis made by António Pedro Pinheiro and supervised by Rita P. Ribeiro.
   - Thesis URL: <https://hdl.handle.net/10216/169022>
-  - Code Ocean Reproducible Capsule URL: <[https://codeocean.com/capsule/7333875/tree](https://doi.org/10.24433/CO.7826905.v2)>
+  - Code Ocean Reproducible Capsule URL: <https://doi.org/10.24433/CO.7826905.v2>
 
 
 This repository presents a comprehensive **comparative study** of classical and novel **tabular data generation techniques** for **imbalanced regression** tasks, including:
